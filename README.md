@@ -8,6 +8,9 @@ Requirement for setup and demo:
 - Linux in with an ssh/web server with no static IP. (call it target)
 - Linux / Android phone with JuiceSSH
 
+ensure folwoing in /etc/ssh/sshd_config\
+<code>GatewayPorts yes</code>
+
 run following in target computer to use boss.com:1008 as web address for target \
 <code>ssh -R 1008:127.0.0.1:80 root@boss.com</code>\
 Now you can excess target web server as boot.com:1008 from any device (try with browser from your mobile device)
