@@ -15,9 +15,9 @@ ssh
 ===
 apt install openssh-server\
 edit /etc/ssh/sshd_config\
-<code>PermitRootLogin yes</code>
+<code>PermitRootLogin yes</code>\
 also ensure following in /etc/ssh/sshd_config\
-<code>GatewayPorts yes</code>
+<code>GatewayPorts yes</code>\
 service ssh restart\
 
 run following in target computer to use boss.com:1008 as web address for target \
