@@ -34,3 +34,6 @@ Lastly do following to ensure that mytunnel user can do only tunneling work via 
 - 1008 is port of boss
 - when root@boss.com is written , actually it is not calling boss.
 - It only means root@target
+- so target needs to know password of account at boss
+- but client donot need to know password-at-boss
+- but client need to know password-at-client
