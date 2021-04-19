@@ -1,8 +1,8 @@
 # ssh_tunnel
                  =======
-                |  boss |\
+                |  boss |
 client=====>======>======>=== tunnel =====>target\
-                |       |\
+                |       |
                  ======
                 
 This is my experience of using ssh for connecting a computer without static ip address from a remote computer\
