@@ -10,8 +10,15 @@ Requirement for setup and demo:
 - Linux in with an ssh/web server with no static IP. (call it target)
 - Linux / Android phone with JuiceSSH (call it client)
 
-ensure following in /etc/ssh/sshd_config\
+
+ssh
+===
+apt install openssh-server\
+edit /etc/ssh/sshd_config\
+<code>PermitRootLogin yes</code>
+also ensure following in /etc/ssh/sshd_config\
 <code>GatewayPorts yes</code>
+service ssh restart\
 
 run following in target computer to use boss.com:1008 as web address for target \
 <code>ssh -R 1008:127.0.0.1:80 root@boss.com</code>\
