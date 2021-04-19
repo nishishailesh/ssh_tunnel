@@ -18,7 +18,7 @@ edit /etc/ssh/sshd_config\
 <code>PermitRootLogin yes</code>\
 also ensure following in /etc/ssh/sshd_config\
 <code>GatewayPorts yes</code>\
-service ssh restart\
+service ssh restart
 
 run following in target computer to use boss.com:1008 as web address for target \
 <code>ssh -R 1008:127.0.0.1:80 root@boss.com</code>\
