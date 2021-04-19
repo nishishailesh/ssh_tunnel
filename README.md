@@ -1,9 +1,9 @@
 # ssh_tunnel
-                oooooooooo
-                o  boss  0
+                oooooooooo\
+                o  boss  0\
 client>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>target\
-                o        o
-                oooooooooo
+                o        o\
+                oooooooooo\
                 
 This is my experience of using ssh for connecting a computer without static ip address from a remote computer\
 This is required to manage projects in server (serving in LAN) with no static ip to use
