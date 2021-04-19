@@ -1,7 +1,7 @@
 # ssh_tunnel
                 oooooooooo
                 o  boss  0
-client=====>======>======>=== tunnel =====>target\
+client>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>target\
                 o        o
                 oooooooooo
                 
