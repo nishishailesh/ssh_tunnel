@@ -1,12 +1,19 @@
 # ssh_tunnel
-
+                    //
+                  //////
+                //////////
+                |  boss |
+client=====>======>======>=== tunnel =====>target
+                |       |
+                /////////
+                
 This is my experience of using ssh for connecting a computer without static ip address from a remote computer\
 This is required to manage projects in server (serving in LAN) with no static ip to use
 
 Requirement for setup and demo:
 - Linux in with an ssh server with static IP ( call it boss.com )
 - Linux in with an ssh/web server with no static IP. (call it target)
-- Linux / Android phone with JuiceSSH
+- Linux / Android phone with JuiceSSH (call it client)
 
 ensure following in /etc/ssh/sshd_config\
 <code>GatewayPorts yes</code>
