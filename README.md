@@ -28,7 +28,7 @@ Accessing server with root password is not good idea.
 Lastly do following to ensure that mytunnel user can do only tunneling work via boss.com
 - in /etc/passwd in boss.com, replace shell of *mytunnel* from /bin/bash to /bin/false
 - add *-f -N* in above commands
-<code>ssh -f -N -R 1008:127.0.0.1:2048 root@boss.com</code>\
+<code>ssh -f -N -R 1008:127.0.0.1:2048 root@boss.com</code>
 - Now, user *mytunnel* can use only ssh-tunnel functinality from server
 - 80,2048 are ports of target
 - 1008 is port of boss
