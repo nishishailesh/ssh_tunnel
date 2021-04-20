@@ -38,11 +38,13 @@ Lastly do following to ensure that mytunnel user can do only tunneling work via 
 - in /etc/passwd in boss.com, replace shell of *mytunnel* from /bin/bash to /bin/false
 - add *-f -N* in above commands
 <code>ssh -f -N -R 1008:127.0.0.1:2048 root@boss.com</code>
+<code>ssh -p2222 -f -N -R 1008:127.0.0.1:2048 root@boss.com</code>
 - Now, user *mytunnel* can use only ssh-tunnel functinality from server
-- 80,2048 are ports of target
+- 80 (apache),2048 (ssh) are ports of target
 - 1008 is port of boss
+- 2222 is port of boss where ssh-server is running.
 - when root@boss.com is written , actually it is not calling boss.
-- It only means root@target
+- It only means root@target is accessed
 - so target needs to know password of account at boss
 - but client donot need to know password-at-boss
 - but client need to know password-at-client
