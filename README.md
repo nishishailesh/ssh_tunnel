@@ -79,7 +79,7 @@ password:xyz
 developer computer:
 run following command
 ssh -p2222 root@123.123.123.123
-when ask for password, give root password of remote computer (xyz)
+when ask for password, give root password of remote computer (xyz) 
 ```
 
 ```
