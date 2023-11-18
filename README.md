@@ -89,3 +89,7 @@ ssh -p2222 root@127.0.0.1
 when ask for password, give root password of remote computer (xyz)
 ```
 
+```
+developer connect to port 2222 of 123.123.123.123 -> it just forwards it to port 22 of remote computer.
+So, developer gives root password of remote computer
+``` 
