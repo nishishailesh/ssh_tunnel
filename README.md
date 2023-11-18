@@ -68,11 +68,10 @@ in /etc/passwd in tunnling computer with static IP, replace shell of *tun* from 
 ```
 
 ```
-remote computer:
+remote computer: (user: root password:xyz )
 run following command
 ssh -f -N -R 22:127.0.0.1:2222 tun@123.123.123.123
-user: root
-password:xyz
+when password is asked give tun password tun@123
 ```
 
 ```
