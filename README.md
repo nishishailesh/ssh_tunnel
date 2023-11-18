@@ -37,8 +37,12 @@ Accessing server with root password is not good idea.
 Lastly do following to ensure that mytunnel user can do only tunneling work via boss.com
 - in /etc/passwd in boss.com, replace shell of *mytunnel* from /bin/bash to /bin/false
 - add *-f -N* in above commands
+  
 <code>ssh -f -N -R 1008:127.0.0.1:2048 root@boss.com</code>
+
 <code>ssh -p2222 -f -N -R 1008:127.0.0.1:2048 root@boss.com</code>
+
+
 - Now, user *mytunnel* can use only ssh-tunnel functinality from server
 - 80 (apache),2048 (ssh) are ports of target
 - 1008 is port of boss
@@ -48,3 +52,41 @@ Lastly do following to ensure that mytunnel user can do only tunneling work via 
 - so target needs to know password of account at boss
 - but client donot need to know password-at-boss
 - but client need to know password-at-client
+
+
+Better and simplified explanation
+=================================
+suppose i want to access a remote computer from developer computer.\
+developer have account in a tunnling computer with static IP.\
+remote <----- tunneling <------- developer
+
+```
+tunnling computer:
+tunnling computer staticIP 123.123.123.123\
+tunnling computer username tun and password tun@123\
+in /etc/passwd in tunnling computer with static IP, replace shell of *tun* from /bin/bash to /bin/false
+```
+
+```
+remote computer:
+run following command
+ssh -f -N -R 22:127.0.0.1:2222 tun@123.123.123.123
+user: root
+password:xyz
+```
+
+```
+developer computer:
+run following command
+ssh -p2222 root@123.123.123.123
+when ask for password, give root password of remote computer (xyz)
+```
+
+```
+developer working at tunnaling computer:
+remote <----- (tunneling + developer)
+run following command
+ssh -p2222 root@127.0.0.1
+when ask for password, give root password of remote computer (xyz)
+''''
+
