@@ -93,3 +93,33 @@ when ask for password, give root password of remote computer (xyz)
 developer connect to port 2222 of 123.123.123.123 -> it just forwards it to port 22 of remote computer.
 So, developer gives root password of remote computer
 ``` 
+
+```
+Real life example
+------------tunneling server---------------
+tunneling server tunnel.com
+create user mytunnel, setup as above
+setup sshd_config as above
+
+------------server without static ip--------
+ssh -p1234 -f -N -R 24080:127.0.0.1:443 mytunnel@tunnel.com
+give password
+
+1234 is ssh port of tunnel.com
+443 is web  port of server without static ip
+24080 is calling-port to access 443 port of server without static ip
+
+------------client (mobile browser, any desktop browser , anywhere)---------
+https://tunnel.com:24080
+
+This address will
+reach tunnel.com, port 24080
+But, tunnel.com will forward it to port 443 of server-without-ip
+
+---------------------I do not understand fully. But useful to manage /access servier without ip-------------- 
+
+
+
+```
+
+
